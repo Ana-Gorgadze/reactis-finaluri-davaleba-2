@@ -10,9 +10,6 @@ function ProductItem({ item }) {
         </div>
         <h3 className={styles.title}>{item.title}</h3>
       </div>
-      <div>
-        <p className={styles.desc}>{item.description}</p>
-      </div>
       <div className={styles.priceContainer}>
         <h4 className={styles.price}>{item.price}$</h4>
         <div className={styles.ratingWrapper}>

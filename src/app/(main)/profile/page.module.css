@@ -1,6 +1,9 @@
 .image {
   border-radius: 50%;
-  border: 1px solid gray;
+  background-color: white;
+  box-shadow: 0 5px 10px #adb5bd;
+  margin-bottom: -50px;
+  z-index: 100;
 }
 
 .container {
@@ -15,15 +18,16 @@
 .infoWrapper {
   display: flex;
   gap: 20px;
-  padding: 5px 10px;
-  border-radius: 8px;
-  border: 1px solid gray;
 }
+
 .section {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  padding: 4rem;
+  padding: 5rem 3rem 3rem 3rem;
   gap: 20px;
-  align-items: center;
+  align-items: start;
   justify-content: center;
+  background-color: white;
+  border-radius: 10px;
 }

@@ -10,7 +10,9 @@
   top: 32px;
   display: flex;
   justify-content: space-around;
-  border-radius: 16px;
+  border-radius: 26px;
+  background-color: #adb5bd45;
+  padding: 10px;
 }
 
 .link {
@@ -20,12 +22,13 @@
   align-items: center;
   border-radius: 16px;
   height: 40px;
+  font-weight: 600;
 }
 
 .activeLink {
-  background-color: #fff;
+  background-color: #ADB5BD;
 }
 
 .inActiveLink {
-  color: rgb(96, 96, 96);
+  color: #212529;
 }

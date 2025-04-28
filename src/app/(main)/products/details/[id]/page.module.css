@@ -1,0 +1,30 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 20%;
+    color: aliceblue;
+}
+
+.container img{
+    border-radius: 10px;
+    margin-right: -100px;
+    /* position: absolute; */
+    z-index: 100;
+}
+
+.container div{
+    background-color: rgba(17, 24, 39, 1);
+    border-radius: 20px;    
+    padding: 50px 50px 50px 120px;
+}
+
+.container div .p{
+    color: rgba(240, 248, 255, 0.503);
+}
+
+.container div .pricee{
+    color: rgb(255, 255, 0);
+}

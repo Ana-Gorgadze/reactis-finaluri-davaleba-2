@@ -3,6 +3,33 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 20px 10vh 20px;
   padding-top: 120px;
+}
+
+.conti{
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.conti .gr{
+  width: 70%;
+  height: 130vh;
+  background: linear-gradient( 165deg, #6c757d, #abb2b8);
+  position: absolute;
+  z-index: -1;
+  border-radius: 30px;
+  transform: rotate(45deg);
+  margin-top: 100px;
+  margin-left: 3%;
+}
+
+.conti .title{
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 30%;
+  font-size: 150px;
+  color: aliceblue;
 }

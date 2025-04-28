@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 const Profile = async () => {
   let profile;
   try {
-    const data = await fetch("https://dummyjson.com/users/1");
+    const data = await fetch("https://dummyjson.com/users/3");
     profile = await data.json();
 
     if (profile.message) {
@@ -29,12 +29,20 @@ const Profile = async () => {
           <p>{profile.firstName}</p>
         </div>
         <div className={styles.infoWrapper}>
-          <p>მაიდენნეიმი: </p>
-          <p>{profile.maidenName}</p>
-        </div>
-        <div className={styles.infoWrapper}>
           <p>გვარი: </p>
           <p>{profile.lastName}</p>
+        </div>
+        <div className={styles.infoWrapper}>
+          <p>ემაილი: </p>
+          <p>{profile.email}</p>
+        </div>
+        <div className={styles.infoWrapper}>
+          <p>პაროლი: </p>
+          <p>{profile.password}</p>
+        </div>
+        <div className={styles.infoWrapper}>
+          <p>დაბადების დღე: </p>
+          <p>{profile.birthDate}</p>
         </div>
       </section>
     </div>

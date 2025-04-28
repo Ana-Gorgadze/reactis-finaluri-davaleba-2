@@ -12,13 +12,19 @@ const Products = async () => {
   }
 
   return (
-    <div className={styles.container}>
-      {products.map((product) => (
-        <Link key={product.id} href={`/products/details/${product.id}`}>
-          <ProductItem item={product} />
-        </Link>
-      ))}
-    </div>
+    <section>
+      <div className={styles.conti}>
+        <div className={styles.gr}></div>
+        <h1 className={styles.title}>ALL SHOPS</h1>
+      </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <div className={styles.container}>
+        {products.map((product) => (
+          <Link key={product.id} href={`/products/details/${product.id}`}>
+            <ProductItem item={product} />
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 };
 
