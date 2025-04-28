@@ -37,12 +37,32 @@ const Profile = async () => {
           <p>{profile.email}</p>
         </div>
         <div className={styles.infoWrapper}>
+          <p>ტელეფონი: </p>
+          <p>{profile.phone}</p>
+        </div>
+        <div className={styles.infoWrapper}>
+          <p>მისამართი: </p>
+          <p>{profile.address.city}, {profile.address.state}, {profile.address.address}</p>
+        </div>
+        <div className={styles.infoWrapper}>
           <p>პაროლი: </p>
           <p>{profile.password}</p>
         </div>
         <div className={styles.infoWrapper}>
           <p>დაბადების დღე: </p>
           <p>{profile.birthDate}</p>
+        </div>
+        <div className={styles.infoWrapper}>
+          <p>უნივერსიტეტი: </p>
+          <p>{profile.university}</p>
+        </div>
+        <div className={styles.infoWrapper}>
+          <p>კომპანია: </p>
+          <p>{profile.company.name}</p>
+        </div>
+        <div className={styles.infoWrapper}>
+          <p>კომპანიის მისამართი: </p>
+          <p>{profile.company.address.address}</p>
         </div>
       </section>
     </div>
