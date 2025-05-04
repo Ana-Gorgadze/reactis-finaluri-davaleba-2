@@ -1,19 +1,10 @@
-"use client"
-
-import React, { useEffect, useState } from 'react';
 import styles from './page.module.css';
+import AddToCart from '@/components/AddToCart/AddToCart';
 
-function ProductDetail({ params }) {
-    const [product, setProduct] = useState(null);
-
-    useEffect(() => {
-        const fetchProduct = async () => {
-            const response = await fetch(`https://fakestoreapi.com/products/${params.id}`);
-            const data = await response.json();
-            setProduct(data);
-        };
-        fetchProduct();
-    }, [params.id]);
+const ProductDetail = async ({params}) => {
+    const { id } = await params;
+    const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+    const product = await res.json();
 
     return (
         <section className={styles.container}>
@@ -23,7 +14,10 @@ function ProductDetail({ params }) {
                 <p className={styles.p}>{product?.description}</p><br />
                 <p className={styles.p}>rating: {product?.rating?.rate}/5</p>
                 <p className={styles.p}>reviews: {product?.rating?.count}</p><br/>
-                <p className={styles.price}>price: ${product?.price}</p>
+                <nav>
+                    <p className={styles.price}>price: ${product?.price}</p>
+                    <AddToCart product={product}/>
+                </nav>
             </div>
         </section>
     );

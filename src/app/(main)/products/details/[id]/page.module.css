@@ -28,3 +28,9 @@
 .container div .pricee{
     color: rgb(255, 255, 0);
 }
+
+.container nav{
+    display: flex;
+    justify-content: space-between;
+}
+
