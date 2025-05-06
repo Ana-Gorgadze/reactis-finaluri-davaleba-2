@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -12,28 +12,39 @@ export default function Home() {
 
   const handleLoginChange = () => {
     setLogin(!login);
-    setUsername("");
-    setEmail("");
-    setPassword("");
   };
+
+  const checkIfUserExists = async () => {
+    const result = await JSON.parse(localStorage.getItem('user'));
+
+    if(result !== null){
+      router.replace("/products", { path: "products" });
+    }
+  }
+
+  useEffect(() => {
+    checkIfUserExists()
+  }, [])
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
     try {
-      const res = await fetch("https://fakestoreapi.com/auth/login", {
+      fetch("https://fakestoreapi.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           username: username,
-          password: password,
+          password: "m38rmF$",
         }),
-      });
-      const data = await res.json();
-      if (data.token) {
-        router.replace("/products");
-      } else {
-        alert("Incorrect login details!");
-      }
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          if (res.token) {
+            localStorage.setItem("user", JSON.stringify(res.token));
+            router.replace("/products", { path: "products" });
+          }
+        });
     } catch (error) {
       console.log(error.message);
     }
