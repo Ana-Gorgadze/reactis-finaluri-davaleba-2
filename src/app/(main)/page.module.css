@@ -1,22 +1,28 @@
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
-.nav {
-  width: 30vw;
+.header {
+  width: 100%;
   position: fixed;
-  display: block;
-  align-self: center;
-  top: 32px;
   display: flex;
-  justify-content: space-around;
-  border-radius: 26px;
-  background-color: #adb5bd45;
-  padding: 10px;
+  justify-content: space-between; 
+  align-items: center;
+  height: 8vh;
+  display: flex;
+  background-color: #adb5bdd5;
+  padding: 0px 6%;
 }
 
+.header .div{
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+
+
 .link {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +32,7 @@
 }
 
 .activeLink {
-  background-color: #ADB5BD;
+  color: #ffffff;
 }
 
 .inActiveLink {

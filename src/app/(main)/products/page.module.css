@@ -18,7 +18,7 @@
   width: 70%;
   height: 130vh;
   background: linear-gradient( 165deg, #6c757d, #abb2b8);
-  position: absolute;
+  position: fixed;
   z-index: -1;
   border-radius: 30px;
   transform: rotate(45deg);
