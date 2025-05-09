@@ -12,7 +12,6 @@ function AddToCart({ product }) {
       );
     } else {
       const index = result.findIndex((item) => item.product.id === product.id);
-    //   const index = result.findIndex((item) => console.log(item.product.id));
 
       if (index > -1) {
         result[index].count++;

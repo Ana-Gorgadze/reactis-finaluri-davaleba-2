@@ -2,7 +2,7 @@
   border-radius: 50%;
   background-color: white;
   box-shadow: 0 5px 10px #adb5bd;
-  margin-bottom: -80px;
+  /* margin-bottom: -80px; */
   z-index: 100;
 }
 
@@ -23,11 +23,28 @@
 
 .section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  padding: 5rem 3rem 3rem 3rem;
+  padding: 3rem 3rem 3rem 3rem;
   gap: 20px;
   justify-content: center;
   background-color: white;
   border-radius: 10px;
+}
+
+.title{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title p{
+  font-size: 30px;
+}
+
+.textdiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

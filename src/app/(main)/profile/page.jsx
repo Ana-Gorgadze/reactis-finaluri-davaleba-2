@@ -17,53 +17,53 @@ const Profile = async () => {
 
   return (
     <div className={styles.container}>
-      <Image
-        src={profile.image}
-        className={styles.image}
-        alt="Profile Image"
-        width={100}
-        height={100}
-      />
       <section className={styles.section}>
-        <div className={styles.infoWrapper}>
-          <p>სახელი: </p>
-          <p>{profile.firstName}</p>
+        <div>
+          <Image
+            src={profile.image}
+            className={styles.image}
+            alt="Profile Image"
+            width={200}
+            height={200}
+          />
+          <div className={`${styles.infoWrapper}, ${styles.title}`}>
+            <p>{profile.firstName}</p>
+            <p>{profile.lastName}</p>
+          </div>
         </div>
-        <div className={styles.infoWrapper}>
-          <p>გვარი: </p>
-          <p>{profile.lastName}</p>
-        </div>
-        <div className={styles.infoWrapper}>
-          <p>ემაილი: </p>
-          <p>{profile.email}</p>
-        </div>
-        <div className={styles.infoWrapper}>
-          <p>ტელეფონი: </p>
-          <p>{profile.phone}</p>
-        </div>
-        <div className={styles.infoWrapper}>
-          <p>მისამართი: </p>
-          <p>{profile.address.city}, {profile.address.state}, {profile.address.address}</p>
-        </div>
-        <div className={styles.infoWrapper}>
-          <p>პაროლი: </p>
-          <p>{profile.password}</p>
-        </div>
-        <div className={styles.infoWrapper}>
-          <p>დაბადების დღე: </p>
-          <p>{profile.birthDate}</p>
-        </div>
-        <div className={styles.infoWrapper}>
-          <p>უნივერსიტეტი: </p>
-          <p>{profile.university}</p>
-        </div>
-        <div className={styles.infoWrapper}>
-          <p>კომპანია: </p>
-          <p>{profile.company.name}</p>
-        </div>
-        <div className={styles.infoWrapper}>
-          <p>კომპანიის მისამართი: </p>
-          <p>{profile.company.address.address}</p>
+        <div className={styles.textdiv}>
+          <div className={styles.infoWrapper}>
+            <p>ემაილი: </p>
+            <p>{profile.email}</p>
+          </div>
+          <div className={styles.infoWrapper}>
+            <p>ტელეფონი: </p>
+            <p>{profile.phone}</p>
+          </div>
+          <div className={styles.infoWrapper}>
+            <p>მისამართი: </p>
+            <p>{profile.address.city}, {profile.address.state}, {profile.address.address}</p>
+          </div>
+          <div className={styles.infoWrapper}>
+            <p>პაროლი: </p>
+            <p>{profile.password}</p>
+          </div>
+          <div className={styles.infoWrapper}>
+            <p>დაბადების დღე: </p>
+            <p>{profile.birthDate}</p>
+          </div>
+          <div className={styles.infoWrapper}>
+            <p>უნივერსიტეტი: </p>
+            <p>{profile.university}</p>
+          </div>
+          <div className={styles.infoWrapper}>
+            <p>კომპანია: </p>
+            <p>{profile.company.name}</p>
+          </div>
+          <div className={styles.infoWrapper}>
+            <p>კომპანიის მისამართი: </p>
+            <p>{profile.company.address.address}</p>
+          </div>
         </div>
       </section>
       <SignOut />
