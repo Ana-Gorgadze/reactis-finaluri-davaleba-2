@@ -12,6 +12,7 @@
   display: flex;
   background-color: #adb5bdd5;
   padding: 0px 6%;
+  z-index: 101;
 }
 
 .header .div{

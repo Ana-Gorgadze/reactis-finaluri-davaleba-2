@@ -65,8 +65,8 @@ const Profile = async () => {
           <p>კომპანიის მისამართი: </p>
           <p>{profile.company.address.address}</p>
         </div>
-        <SignOut />
       </section>
+      <SignOut />
     </div>
   );
 };
