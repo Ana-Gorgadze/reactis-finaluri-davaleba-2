@@ -4,7 +4,9 @@
     width: 100%;
     padding: 2vh 0 0 0;
     color: gray;
-    text-decoration: underline;
     cursor: pointer;
 }
 
+.signout:hover{
+    text-decoration: underline;
+}

@@ -1,6 +1,8 @@
 import ProductItem from "@/components/ProductItem/ProductItem";
 import styles from "./page.module.css";
 import Link from "next/link";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const Products = async () => {
   let products;
@@ -13,6 +15,7 @@ const Products = async () => {
 
   return (
     <section>
+      <Header />
       <div className={styles.conti}>
         <div className={styles.gr}></div>
         <h1 className={styles.title}>ALL SHOPS</h1>
@@ -24,6 +27,7 @@ const Products = async () => {
           </Link>
         ))}
       </div>
+      <Footer />
     </section>
   );
 };
