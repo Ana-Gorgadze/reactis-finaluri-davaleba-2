@@ -11,8 +11,6 @@ function page() {
     setCartProducts(products);
   };
   
-  console.log(cartProducts);
-  
   useEffect(() => {
     getProductsFromStorage();
   }, [cartProducts]);
@@ -31,7 +29,7 @@ function page() {
 
     if (index !== -1) {
       products[index].count--;
-  
+      
       if (products[index].count <= 0) {
         products.splice(index, 1); 
       }
