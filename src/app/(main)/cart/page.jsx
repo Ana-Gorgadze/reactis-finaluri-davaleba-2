@@ -8,9 +8,19 @@ import Footer from "@/components/Footer/Footer";
 function page() {
   const [cartProducts, setCartProducts] = useState([]);
 
-  const getProductsFromStorage = async () => {
-    const products = await JSON?.parse(localStorage.getItem("products"));
-    setCartProducts(products);
+  // const getProductsFromStorage = async () => {
+  //   const products = await JSON?.parse(localStorage.getItem("products"));
+  //   setCartProducts(products);
+  // };
+
+  const getProductsFromStorage = () => {
+    const productsString = localStorage.getItem("products");
+    if (productsString) {
+      const products = JSON.parse(productsString);
+      setCartProducts(products);
+    } else {
+      setCartProducts([]);
+    }
   };
   
   useEffect(() => {
@@ -55,10 +65,8 @@ function page() {
 
   const service = 4.99;
 
-  const totalPrice = cartProducts.reduce((acc, item) => {
-    return (acc + item.product.price * item.count) + service;
-  }, 0);
-
+  const productsTotal = cartProducts.reduce((acc, item) => acc + item.product.price * item.count, 0);
+  const totalPrice = productsTotal + service;
 
 
   return (
