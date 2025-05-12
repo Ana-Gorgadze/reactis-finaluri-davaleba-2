@@ -9,7 +9,7 @@ function page() {
   const [cartProducts, setCartProducts] = useState([]);
 
   const getProductsFromStorage = async () => {
-    const products = await JSO?.parse(localStorage.getItem("products"));
+    const products = await JSO.parse(localStorage.getItem("products"));
     setCartProducts(products);
   };
   
