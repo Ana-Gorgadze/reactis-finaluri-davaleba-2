@@ -15,7 +15,8 @@ function page() {
   
   useEffect(() => {
     getProductsFromStorage();
-  }, []);
+  }, []); 
+  
 
   const handleAddOne = async (product) => {
     const products = await JSON.parse(localStorage.getItem("products"));
