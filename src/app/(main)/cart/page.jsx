@@ -15,12 +15,13 @@ function page() {
   
   useEffect(() => {
     getProductsFromStorage();
-  }, [cartProducts]);
+  }, []);
 
   const handleAddOne = async (product) => {
     const products = await JSON.parse(localStorage.getItem("products"));
     const index = products.findIndex((item) => item.product.id === product.id)
     products[index].count++;
+    setCartProducts(products)
 
     localStorage.setItem('products', JSON.stringify([...products]))
   }
@@ -35,6 +36,7 @@ function page() {
       if (products[index].count <= 0) {
         products.splice(index, 1); 
       }
+      setCartProducts(products)
   
       localStorage.setItem('products', JSON.stringify([...products]));
     }
@@ -47,6 +49,7 @@ function page() {
     products.splice(index, 1); 
 
     localStorage.setItem('products', JSON.stringify([...products]));
+    setCartProducts(products)
   }
 
   const service = 4.99;
