@@ -4,55 +4,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  // const [login, setLogin] = useState(true);
-  // const [username, setUsername] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const router = useRouter();
-
-  // const handleLoginChange = () => {
-  //   setLogin(!login);
-  // };
-
-  // const checkIfUserExists = async () => {
-  //   const result = await JSON.parse(localStorage.getItem('user'));
-
-  //   if(result !== null){
-  //     router.replace("/products", { path: "products" });
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   checkIfUserExists()
-  // }, [])
-
-  // const handleLogin = async (e) => {
-  //   e.preventDefault();
-
-  //   try {
-  //     fetch("https://fakestoreapi.com/auth/login", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify({
-  //         username: username,
-  //         password: "m38rmF$",
-  //       }),
-  //     })
-  //       .then((res) => res.json())
-  //       .then((res) => {
-  //         if (res.token) {
-  //           localStorage.setItem("user", JSON.stringify(res.token));
-  //           router.replace("/products", { path: "products" });
-  //         }
-  //       });
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
-
-
-
-
   const [login, setLogin] = useState(true);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");

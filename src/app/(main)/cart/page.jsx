@@ -8,11 +8,6 @@ import Footer from "@/components/Footer/Footer";
 function page() {
   const [cartProducts, setCartProducts] = useState([]);
 
-  // const getProductsFromStorage = async () => {
-  //   const products = await JSON?.parse(localStorage.getItem("products"));
-  //   setCartProducts(products);
-  // };
-
   const getProductsFromStorage = () => {
     const productsString = localStorage.getItem("products");
     if (productsString) {
